@@ -28,6 +28,8 @@
 
 #if defined(WIN32) || defined(__CYGWIN__)
 #define USBMUXD_SOCKET_PORT 27015
+#elif defined(ANDROID)
+#define USBMUXD_SOCKET_FILE "/data/misc/carlife/usbmuxd/usbmuxd"
 #else
 #define USBMUXD_SOCKET_FILE "/var/run/usbmuxd"
 #endif
